@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {BrowserRouter, Route, Routes}  from 'react-router-dom'
+import { ListView } from "./Component/ListView";
+import { EditTask } from "./Component/EditTask";
+import { AddTask } from "./Component/AddTask";
+import { UserContextProvider } from "./Component/ContextAPI/ContextProvider";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContextProvider>
+    <BrowserRouter>
+    <Routes>
+      <Route index  element={<ListView/>} />
+      <Route path="edit"  element={<EditTask/>} />
+      <Route path="add"  element={<AddTask/>} />
+    </Routes>
+    </BrowserRouter>
+    </UserContextProvider>
+    
   );
 }
 
