@@ -77,6 +77,7 @@ export  const EditTask = () =>{
 
         
         <Typography sx={{textAlign:"center",padding:"10px", fontSize:{lg:"50px", md:"40px", sm:"40px", xs:"30px" }}}>Edit Task</Typography>
+        <Typography sx={{color:"blue", fontSize:"13px", textAlign:"center"}}>If you do not want to change nothing  then click on add task</Typography>
         <Form  onSubmit={handleSubmit}  sx={{border:"0.2px solid blue", padding:"10px", borderRadius:"3px"}}>
             <input placeholder="Enter task name"   style={{height:"20px", padding:"5px"}}  name="name" value={data.name || ""}    onChange={handleChange}  />
             <textarea placeholder="Description"   name="description" value={data.description || ""} onChange={handleChange} style={{padding:"10px"}}>

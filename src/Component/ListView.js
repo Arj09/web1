@@ -95,9 +95,7 @@ export  const ListView = () =>{
 
    
 
-    useEffect(()=>{
-        setLength(data1.lenght)
-    },[])
+   
 
     return(
 
@@ -167,22 +165,7 @@ export  const ListView = () =>{
 
         
 
-        {
-            lenght > 1 ? (
-
-            /*    <Box sx={{display:'flex', width:"60%", flexDirection:"row", margin:"5px auto", justifyContent:"space-evenly"}}>
-                    <button> &lt;</button>
-                    <Typography>1</Typography>
-                    <button> &gt;</button>
-                </Box>*/
-                <div> show</div>
-            ):(
-                <div  >  not show </div>
-            )
-        }
-        {
-            
-        }
+        
 
 
         </Box>
