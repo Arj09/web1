@@ -4,6 +4,7 @@ import { ListView } from "./Component/ListView";
 import { EditTask } from "./Component/EditTask";
 import { AddTask } from "./Component/AddTask";
 import { UserContextProvider } from "./Component/ContextAPI/ContextProvider";
+import { Testing } from "./Component/Testing";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route index  element={<ListView/>} />
       <Route path="edit"  element={<EditTask/>} />
       <Route path="add"  element={<AddTask/>} />
+      <Route path="testing" element={<Testing/>} />
     </Routes>
     </BrowserRouter>
     </UserContextProvider>
